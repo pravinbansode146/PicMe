@@ -1,2 +1,0 @@
-# PicMe
-e-Commerce Website
