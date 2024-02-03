@@ -1,0 +1,234 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Customerpanel.master.cs" Inherits="Customer_Customerpanel" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        .style21
+        {
+            width: 80%;
+        }
+        .style10
+        {
+            width: 131px;
+        }
+        .style11
+        {
+            font-size: large;
+        }
+        .style15
+        {
+            width: 131px;
+            height: 33px;
+        }
+        .style16
+        {
+            width: 533px;
+            height: 33px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+        .style17
+        {
+            width: 59px;
+            height: 33px;
+        }
+        .style18
+        {
+            height: 33px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+        .style22
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+        .style23
+        {
+            width: 59px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .style24
+        {
+            width: 533px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+        .style25
+        {
+            font-size: medium;
+        }
+        .style26
+        {
+            font-size: medium;
+            text-align: left;
+        }
+        .style27
+        {
+            width: 100%;
+        }
+        .style31
+        {
+            font-size: x-large;
+        }
+        .style30
+        {
+            font-size: small;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <br />
+    
+   
+    
+    <table cellpadding="0" cellspacing="0" class=""   align="center" width="100%" 
+        
+        style="border-color: #000000; border-style: solid; border-width: 10px thin thin thin; font-family: Arial, Helvetica, sans-serif">
+        <tr>
+            <td >
+                <table align="center" cellspacing="0" class="style21">
+                    <tr>
+                        <td>
+                <asp:Image ID="Image1" runat="server" Height="111px" 
+                    ImageUrl="~/Images/A016.png" Width="317px" style="text-align: left" />
+                        </td>
+                        <td>
+                <table align="center" cellpadding="5" cellspacing="2" 
+                    style="border: thin solid #C0C0C0; border-radius:15px;">
+                    <tr>
+                        <td>
+                            <asp:TextBox ID="TextBox1" runat="server" BorderStyle="None" Height="30px"  placeholder="Search For Product..."
+                                Width="350px"></asp:TextBox>
+                        </td>
+                        <td>
+<asp:ImageButton ID="ImageButton1" runat="server" Height="30px" Width="30px" 
+                                ImageUrl="~/Images/search png.png" onclick="ImageButton1_Click" />
+                        </td>
+                    </tr>
+                </table>
+                        
+                        </td>
+                        <td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                            <asp:ImageButton ID="ImageButton2" runat="server" Height="24px" Width="30px" 
+                                ImageUrl="~/Images/usericon.png" />
+                        &nbsp;&nbsp;<asp:Label ID="Label1" runat="server" 
+                                style="font-size: x-large; font-weight: 700" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="35" style="background-color: #CC0099" >
+                <asp:Menu ID="Menu2" runat="server" 
+                    RenderingMode="Table" Width="80%" ForeColor="White" Height="35px" 
+                    
+                    
+                    
+                    style="background-color: #CC0099; font-weight: 700; font-size: medium; font-family: Arial, Helvetica, sans-serif;" 
+                    Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Customer/home.aspx" Text="Home" 
+                            Value="Home"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Customer/Products.aspx" Text="Products" 
+                            Value="Home ">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Customer/MyOrder.aspx" Text="My Orders" 
+                            Value="Products"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Customer/MyCart.aspx" Text="MyCArt" 
+                            Value="My Account"></asp:MenuItem>
+                        <asp:MenuItem Text="Edit Profile" Value="Edit Profile" 
+                            NavigateUrl="~/Customer/Edit Profile.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Log Out" Value="My Reviews" 
+                            NavigateUrl="~/User/UserHome.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <table cellpadding="4" class="style27">
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+                <table cellpadding="5" cellspacing="0" align="center" style="width: 90%">
+                    <tr>
+                        <td class="style10" style="text-align: left; font-family: 'Ink Free'" 
+                            valign="middle">
+                            <asp:Image ID="Image2" runat="server" Height="120px" 
+                                ImageUrl="~/Images/Delivery.png" Width="120px" CssClass="style11" />
+                        </td>
+                        <td class="style24" style="text-align: left; " 
+                            valign="middle">
+                            <span class="style25"><strong>FREE &amp; FAST DELIVERY</strong></span><br 
+                                class="style25" />
+                            <span class="style26">Free Shipping on shopping worth&nbsp; Rs. 699/-<br />
+&nbsp;or above</span></td>
+                        <td class="style23" style="text-align: left; " 
+                            valign="middle">
+                            <p>
+                                <br class="style11" />
+                                <asp:Image ID="Image3" runat="server" Height="120px" 
+                                    ImageUrl="~/Images/Support1.png" Width="120px" CssClass="style11" />
+                            </p>
+                        </td>
+                        <td style="text-align: left" class="style22">
+                            <span class="style25"><strong>DEDICATED SUPPORT</strong></span><br 
+                                class="style25" />
+                            <span class="style26">Call us at +917666656710 (10am to 06pm) ordr op an email 
+                            at pallavicosmetics@gmail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td class="style15">
+                            <asp:Image ID="Image4" runat="server" Height="120px" 
+                                ImageUrl="~/Images/repay2.png" Width="120px" CssClass="style11" />
+                        </td>
+                        <td class="style16">
+                            <strong><span class="style25">EASY RETURNS</span></strong><br class="style25" />
+                            <span class="style25">We Simply inform us within 48 hours
+                            <br />
+                            and we&#39;ll pick it up from you</span></td>
+                        <td class="style17">
+                            <asp:Image ID="Image5" runat="server" Height="120px" 
+                                ImageUrl="~/Images/Secure payment.png" Width="120px" CssClass="style11" />
+                        </td>
+                        <td class="style18">
+                            <strong><span class="style25">100% PAYMENT SECURE</span></strong><br 
+                                class="style25" />
+                            <span class="style25">We ensure secure payment with PEV</span></td>
+                    </tr>
+                    </table>
+                
+            </td>
+        </tr>
+    </table>
+   
+    
+   
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    </form>
+</body>
+</html>

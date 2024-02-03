@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style3 {
+            height: 50px;
+            background-color: #000000;
+        }
+        .auto-style2 {
+            color: #FFFFFF;
+        }
+        .auto-style6 {
+            height: 50px;
+            background-color: #CEE7FF;
+            font-size: large;
+            color: #003366;
+        }
+        .auto-style8 {
+            height: 50px;
+            text-align: center;
+            background-color: #CEE7FF;
+        }
+        .auto-style5 {
+            text-align: center;
+        }
+        .auto-style7 {
+            text-align: left;
+        }
+        .auto-style4 {
+            width: 288px;
+        }
+        .style9
+        {
+            font-size: medium;
+            color: #000000;
+        }
+        .style8
+        {
+            font-size: medium;
+            text-align: left;
+            color: #000000;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table align="center" cellpadding="0" cellspacing="0" width="1100px" 
+            style="font-family: Arial, Helvetica, sans-serif">
+            <tr>
+                <td class="auto-style3" style="color: #FFFFFF; font-size: xx-large;" 
+                    colspan="2"><span class="auto-style2">&nbsp;</span>&nbsp; Admin Panel</td>
+                <td class="auto-style8" 
+                    style="color: #003366; font-size: x-large; font-weight: 700;">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/A016.png" 
+                        style="text-align: center" Width="450px" />
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td valign="top" class="auto-style5" height="700" style="padding: 10px; background-color: #003399; color: #FFFFFF; font-family: Arial, Helvetica, sans-serif;">
+                    <div class="auto-style7">
+                    <asp:Menu ID="Menu1" runat="server" ForeColor="White" Height="597px" 
+                            RenderingMode="Table" Width="200px">
+                        <DynamicMenuItemStyle ForeColor="White" ItemSpacing="10px" />
+                        <DynamicMenuStyle BackColor="#003399" HorizontalPadding="10px" VerticalPadding="10px" />
+                        <Items>
+                            <asp:MenuItem Text="  Home" Value="Home" ImageUrl="~/Image/home.png" 
+                                NavigateUrl="~/Admin/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text=" Manage Category" Value="Student Management" 
+                                ImageUrl="~/Image/dropbox.png" NavigateUrl="~/Admin/Category.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="  Manage Product" Value="Route Management" 
+                                ImageUrl="~/Image/dropbox.png" NavigateUrl="~/Admin/Product.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="  Manage Order" Value="  Manage Order" 
+                                ImageUrl="~/Image/dropbox.png" NavigateUrl="~/Admin/ManageOrder.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="  View Enquiry" Value="Teriff Management" 
+                                ImageUrl="~/Image/dropbox.png" NavigateUrl="~/Admin/ViewEnquiry.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Image/dropbox.png" Text="  View Order" 
+                                Value="  View Order" NavigateUrl="~/Admin/ViewOrder.aspx"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Image/dropbox.png" Text="   View Feedback" 
+                                Value="   View Feedback" NavigateUrl="~/Admin/ViewFeedback.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="  Report" Value="Report" ImageUrl="~/Image/dropbox.png" 
+                                NavigateUrl="~/Report/Report.aspx">
+                                <asp:MenuItem NavigateUrl="~/Report/Registration.aspx" 
+                                    Text="Registration Report" Value="Registration Report"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/EnquiryReport.aspx" Text="Enquiry Report" 
+                                    Value="Enquiry Report"></asp:MenuItem>
+                                <asp:MenuItem Text="Generate Bill" Value="Generate Bill"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="  Manage Admin" Value="Manage Admin" ImageUrl="~/Image/dropbox.png" NavigateUrl="~/Admin/Manage Admin.aspx"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Image/dropbox.png" NavigateUrl="~/User/UserHome.aspx" 
+                                Text="  Logout" Value="  Logout"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    </div>
+                    <br />
+                </td>
+                <td valign="top" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
